@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodieGo — Food Delivered Fast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">F</span>
+        <span class="logo-text">FoodieGo</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#restaurants" class="nav-link">Restaurants</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#app" class="nav-link">App</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-cart" id="cartBtn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="btn-primary nav-cta">Order Now</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-blob blob-1"></div>
+    <div class="hero-bg-blob blob-2"></div>
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <div class="hero-badge">#1 Food Delivery App in 2026</div>
+        <h1 class="hero-title">Cravings Delivered<br/><span class="gradient-text">in Minutes</span></h1>
+        <p class="hero-subtitle">From your favourite restaurants to your doorstep — hot, fresh, and lightning fast. 500+ restaurants, 10,000+ dishes, zero compromises.</p>
+        <div class="hero-actions">
+          <button class="btn-primary btn-large ripple">Download App</button>
+          <button class="btn-outline btn-large" onclick="document.getElementById('restaurants').scrollIntoView({behavior:'smooth'})">Explore Restaurants</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>500+</strong><span>Restaurants</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>10K+</strong><span>Dishes</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>4.9</strong><span>App Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-main-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80" alt="Gourmet burger with fries"/>
+        </div>
+        <!-- Floating food cards -->
+        <div class="float-card float-card-1">
+          <div class="float-img"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=120&q=80" alt="Margherita Pizza"/></div>
+          <div class="float-info">
+            <strong>Margherita Pizza</strong>
+            <span>₹349</span>
+          </div>
+        </div>
+        <div class="float-card float-card-2">
+          <div class="float-img"><img src="https://images.unsplash.com/photo-1623341214825-9f4f963727da?w=120&q=80" alt="Ramen bowl"/></div>
+          <div class="float-info">
+            <strong>Ramen Bowl</strong>
+            <span>₹299</span>
+          </div>
+        </div>
+        <div class="delivery-badge">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <strong>25 min</strong>
+            <span>Avg. Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#FFF8F3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ======================== FEATURES ======================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Why FoodieGo?</span>
+        <h2 class="section-title">Everything You Need,<br/>Nothing You Don't</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal" data-delay="0">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #FF6B35, #FF8C42);">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="white" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Our optimized delivery network ensures your food arrives hot in under 30 minutes, guaranteed.</p>
+          <div class="feature-stat">Avg. 24 min</div>
+        </div>
+        <div class="feature-card reveal" data-delay="100">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #4F46E5, #7C3AED);">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Live Tracking</h3>
+          <p>Watch your delivery in real-time on the map. Know exactly when your food will arrive, down to the minute.</p>
+          <div class="feature-stat">Real-time GPS</div>
+        </div>
+        <div class="feature-card reveal" data-delay="200">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #22C55E, #16A34A);">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="white" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Secure Payments</h3>
+          <p>Bank-grade encryption on every transaction. Pay via UPI, cards, wallets, or cash on delivery.</p>
+          <div class="feature-stat">256-bit SSL</div>
+        </div>
+        <div class="feature-card reveal" data-delay="300">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #FFB703, #F59E0B);">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="white" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Best Restaurants</h3>
+          <p>Curated from 500+ verified restaurants. Quality-checked, hygiene-certified, and community-rated.</p>
+          <div class="feature-stat">500+ Partners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CATEGORIES ======================== -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Browse by Mood</span>
+        <h2 class="section-title">What Are You<br/>Craving Today?</h2>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card reveal" data-delay="0">
+          <img class="category-img" src="https://images.unsplash.com/photo-1564936281291-294551497d81?w=400&q=80" alt="Pizza"/>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3>Pizza</h3>
+            <span>48 restaurants</span>
+          </div>
+        </div>
+        <div class="category-card reveal" data-delay="80">
+          <img class="category-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="Burger"/>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3>Burger</h3>
+            <span>62 restaurants</span>
+          </div>
+        </div>
+        <div class="category-card reveal" data-delay="160">
+          <img class="category-img" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&q=80" alt="Sushi"/>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3>Sushi</h3>
+            <span>29 restaurants</span>
+          </div>
+        </div>
+        <div class="category-card reveal" data-delay="240">
+          <img class="category-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80" alt="Desserts"/>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3>Desserts</h3>
+            <span>74 restaurants</span>
+          </div>
+        </div>
+        <div class="category-card reveal" data-delay="320">
+          <img class="category-img" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&q=80" alt="Drinks"/>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3>Drinks</h3>
+            <span>38 restaurants</span>
+          </div>
+        </div>
+        <div class="category-card reveal" data-delay="400">
+          <img class="category-img" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80" alt="Indian Food"/>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3>Indian</h3>
+            <span>91 restaurants</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== POPULAR RESTAURANTS ======================== -->
+  <section class="restaurants" id="restaurants">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Top Picks Near You</span>
+        <h2 class="section-title">Popular Restaurants</h2>
+      </div>
+      <div class="restaurants-grid">
+
+        <div class="restaurant-card reveal" data-delay="0">
+          <div class="restaurant-img">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&q=80" alt="Pizza Palace"/>
+            <button class="fav-btn" aria-label="Favourite" data-id="r1">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <div class="rest-badge">Bestseller</div>
+          </div>
+          <div class="restaurant-body">
+            <h3>Pizza Palace</h3>
+            <div class="rest-meta">
+              <span class="rest-rating">4.8</span>
+              <span class="rest-dot">•</span>
+              <span class="rest-time">22 min</span>
+            </div>
+            <div class="rest-cuisine">Italian • Wood-fired</div>
+            <div class="rest-footer">
+              <span class="rest-price">₹200 for two</span>
+              <span class="rest-tag">Free delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card reveal" data-delay="100">
+          <div class="restaurant-img">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80" alt="Burger Barn"/>
+            <button class="fav-btn" aria-label="Favourite" data-id="r2">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="restaurant-body">
+            <h3>Burger Barn</h3>
+            <div class="rest-meta">
+              <span class="rest-rating">4.7</span>
+              <span class="rest-dot">•</span>
+              <span class="rest-time">18 min</span>
+            </div>
+            <div class="rest-cuisine">American • Grilled</div>
+            <div class="rest-footer">
+              <span class="rest-price">₹300 for two</span>
+              <span class="rest-tag">20% off</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card reveal" data-delay="200">
+          <div class="restaurant-img">
+            <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=500&q=80" alt="Sakura Sushi"/>
+            <button class="fav-btn" aria-label="Favourite" data-id="r3">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <div class="rest-badge">New</div>
+          </div>
+          <div class="restaurant-body">
+            <h3>Sakura Sushi</h3>
+            <div class="rest-meta">
+              <span class="rest-rating">4.9</span>
+              <span class="rest-dot">•</span>
+              <span class="rest-time">30 min</span>
+            </div>
+            <div class="rest-cuisine">Japanese • Authentic</div>
+            <div class="rest-footer">
+              <span class="rest-price">₹600 for two</span>
+              <span class="rest-tag">Free delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card reveal" data-delay="300">
+          <div class="restaurant-img">
+            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&q=80" alt="Spice Nirvana"/>
+            <button class="fav-btn" aria-label="Favourite" data-id="r4">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="restaurant-body">
+            <h3>Spice Nirvana</h3>
+            <div class="rest-meta">
+              <span class="rest-rating">4.6</span>
+              <span class="rest-dot">•</span>
+              <span class="rest-time">25 min</span>
+            </div>
+            <div class="rest-cuisine">Indian • North Indian</div>
+            <div class="rest-footer">
+              <span class="rest-price">₹350 for two</span>
+              <span class="rest-tag">30% off</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card reveal" data-delay="400">
+          <div class="restaurant-img">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&q=80" alt="Sweet Tooth Bakery"/>
+            <button class="fav-btn" aria-label="Favourite" data-id="r5">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <div class="rest-badge">Trending</div>
+          </div>
+          <div class="restaurant-body">
+            <h3>Sweet Tooth Bakery</h3>
+            <div class="rest-meta">
+              <span class="rest-rating">4.8</span>
+              <span class="rest-dot">•</span>
+              <span class="rest-time">20 min</span>
+            </div>
+            <div class="rest-cuisine">Bakery • Desserts</div>
+            <div class="rest-footer">
+              <span class="rest-price">₹250 for two</span>
+              <span class="rest-tag">Free delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card reveal" data-delay="500">
+          <div class="restaurant-img">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80" alt="Green Bowl Co."/>
+            <button class="fav-btn" aria-label="Favourite" data-id="r6">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="restaurant-body">
+            <h3>Green Bowl Co.</h3>
+            <div class="rest-meta">
+              <span class="rest-rating">4.7</span>
+              <span class="rest-dot">•</span>
+              <span class="rest-time">15 min</span>
+            </div>
+            <div class="rest-cuisine">Healthy • Vegan</div>
+            <div class="rest-footer">
+              <span class="rest-price">₹280 for two</span>
+              <span class="rest-tag">15% off</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== MENU PREVIEW ======================== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Handpicked for You</span>
+        <h2 class="section-title">Today's Menu</h2>
+      </div>
+      <div class="menu-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pizza">Pizza</button>
+        <button class="filter-btn" data-filter="burger">Burger</button>
+        <button class="filter-btn" data-filter="sushi">Sushi</button>
+        <button class="filter-btn" data-filter="dessert">Dessert</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+
+        <div class="menu-card reveal" data-delay="0" data-category="pizza">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=400&q=80" alt="Margherita Pizza"/>
+            <div class="menu-tag veg">VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Margherita Pizza</h4>
+              <span class="menu-price">₹349</span>
+            </div>
+            <p class="menu-desc">Classic San Marzano tomato base, fresh mozzarella, and basil on crispy wood-fired crust.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.8 (240)</div>
+              <button class="btn-add-cart ripple" data-name="Margherita Pizza" data-price="349" data-img="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-delay="80" data-category="burger">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&q=80" alt="Smash Burger"/>
+            <div class="menu-tag nonveg">NON-VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Smash Burger</h4>
+              <span class="menu-price">₹279</span>
+            </div>
+            <p class="menu-desc">Double smash patty, American cheddar, caramelized onions, and secret house sauce.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.7 (380)</div>
+              <button class="btn-add-cart ripple" data-name="Smash Burger" data-price="279" data-img="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-delay="160" data-category="sushi">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="Salmon Nigiri Set"/>
+            <div class="menu-tag nonveg">NON-VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Salmon Nigiri Set</h4>
+              <span class="menu-price">₹549</span>
+            </div>
+            <p class="menu-desc">Six-piece premium Atlantic salmon nigiri with wasabi, pickled ginger, and soy.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.9 (150)</div>
+              <button class="btn-add-cart ripple" data-name="Salmon Nigiri Set" data-price="549" data-img="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-delay="240" data-category="dessert">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80" alt="Strawberry Cheesecake"/>
+            <div class="menu-tag veg">VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Strawberry Cheesecake</h4>
+              <span class="menu-price">₹199</span>
+            </div>
+            <p class="menu-desc">New York-style cheesecake with fresh strawberry compote and graham cracker crust.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.8 (320)</div>
+              <button class="btn-add-cart ripple" data-name="Strawberry Cheesecake" data-price="199" data-img="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-delay="320" data-category="pizza">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80" alt="Pepperoni Feast"/>
+            <div class="menu-tag nonveg">NON-VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Pepperoni Feast</h4>
+              <span class="menu-price">₹429</span>
+            </div>
+            <p class="menu-desc">Loaded with premium pepperoni, mozzarella blend, and chilli flakes on a thick crust.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.6 (410)</div>
+              <button class="btn-add-cart ripple" data-name="Pepperoni Feast" data-price="429" data-img="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-delay="400" data-category="burger">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&q=80" alt="Crispy Veggie Wrap"/>
+            <div class="menu-tag veg">VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Crispy Veggie Wrap</h4>
+              <span class="menu-price">₹219</span>
+            </div>
+            <p class="menu-desc">Crunchy paneer tikka, sriracha mayo, lettuce, and pickled jalapeños in a toasted wrap.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.5 (190)</div>
+              <button class="btn-add-cart ripple" data-name="Crispy Veggie Wrap" data-price="219" data-img="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-delay="480" data-category="sushi">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&q=80" alt="Dragon Roll"/>
+            <div class="menu-tag nonveg">NON-VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Dragon Roll</h4>
+              <span class="menu-price">₹499</span>
+            </div>
+            <p class="menu-desc">Shrimp tempura inside, avocado-topped roll with spicy mayo and unagi sauce drizzle.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.9 (205)</div>
+              <button class="btn-add-cart ripple" data-name="Dragon Roll" data-price="499" data-img="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-delay="560" data-category="dessert">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80" alt="Mango Kulfi"/>
+            <div class="menu-tag veg">VEG</div>
+          </div>
+          <div class="menu-body">
+            <div class="menu-top">
+              <h4>Mango Kulfi</h4>
+              <span class="menu-price">₹149</span>
+            </div>
+            <p class="menu-desc">Traditional Indian frozen dessert with Alphonso mango, cardamom, and pistachio.</p>
+            <div class="menu-footer">
+              <div class="menu-rating">4.7 (560)</div>
+              <button class="btn-add-cart ripple" data-name="Mango Kulfi" data-price="149" data-img="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=120&q=80">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CART SIDEBAR ======================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <p>Your cart is empty</p>
+        <span>Add some delicious food!</span>
+      </div>
+    </div>
+    <div class="cart-summary" id="cartSummary" style="display:none;">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Delivery fee</span>
+        <span class="text-green">FREE</span>
+      </div>
+      <div class="summary-row summary-total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn-primary btn-checkout ripple">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ======================== APP PREVIEW ======================== -->
+  <section class="app-preview" id="app">
+    <div class="app-bg-blob"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">The FoodieGo App</span>
+        <h2 class="section-title">Order on the Go</h2>
+        <p class="section-subtitle">The smoothest food delivery experience, right in your pocket.</p>
+      </div>
+      <div class="phones-container reveal">
+        <div class="phone phone-left">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="app-screen-header">
+                <span class="app-screen-title">FoodieGo</span>
+              </div>
+              <div class="app-screen-search">Search dishes...</div>
+              <div class="app-screen-label">Home</div>
+              <div class="app-screen-chips">
+                <span class="chip active">All</span>
+                <span class="chip">Pizza</span>
+                <span class="chip">Burger</span>
+              </div>
+              <div class="app-mini-card">
+                <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=80&q=80" alt="Margherita"/>
+                <div><strong>Margherita</strong><p>₹349</p></div>
+              </div>
+              <div class="app-mini-card">
+                <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=80&q=80" alt="Smash Burger"/>
+                <div><strong>Smash Burger</strong><p>₹279</p></div>
+              </div>
+            </div>
+          </div>
+          <p class="phone-label">Home Screen</p>
+        </div>
+        <div class="phone phone-center">
+          <div class="phone-frame phone-frame-center">
+            <div class="phone-screen">
+              <div class="app-screen-header">
+                <span>Back</span>
+                <span class="app-screen-title">Menu</span>
+              </div>
+              <div class="app-menu-hero">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Restaurant hero"/>
+              </div>
+              <div class="app-screen-label" style="font-size:14px; font-weight:600; margin:8px 12px 4px;">Pizza Palace</div>
+              <div style="font-size:11px; color:#888; padding: 0 12px;">4.8 • 22 min • Italian</div>
+              <div class="app-mini-card" style="margin-top:8px;">
+                <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=80&q=80" alt="Margherita"/>
+                <div><strong>Margherita</strong><p>₹349</p></div>
+                <button class="app-add-btn">+</button>
+              </div>
+              <div class="app-mini-card">
+                <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=80&q=80" alt="Pepperoni"/>
+                <div><strong>Pepperoni</strong><p>₹429</p></div>
+                <button class="app-add-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <p class="phone-label">Menu Screen</p>
+        </div>
+        <div class="phone phone-right">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="app-screen-header">
+                <span>Back</span>
+                <span class="app-screen-title">Checkout</span>
+              </div>
+              <div class="app-screen-label" style="margin: 12px 12px 6px;">Order Summary</div>
+              <div class="app-mini-card">
+                <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=80&q=80" alt="Margherita"/>
+                <div><strong>Margherita</strong><p>₹349 × 1</p></div>
+              </div>
+              <div class="app-mini-card">
+                <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=80&q=80" alt="Smash Burger"/>
+                <div><strong>Smash Burger</strong><p>₹279 × 2</p></div>
+              </div>
+              <div class="app-checkout-total">
+                <div class="checkout-row"><span>Subtotal</span><span>₹907</span></div>
+                <div class="checkout-row"><span>Delivery</span><span class="text-green">FREE</span></div>
+                <div class="checkout-row checkout-grand"><span>Total</span><span>₹907</span></div>
+              </div>
+              <button class="app-pay-btn">Pay ₹907</button>
+            </div>
+          </div>
+          <p class="phone-label">Checkout Screen</p>
+        </div>
+      </div>
+      <div class="app-download reveal">
+        <button class="store-btn">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M16.5 2c.1 1.3-.4 2.6-1.2 3.5-.8.9-2 1.6-3.2 1.5-.1-1.3.5-2.6 1.2-3.5.8-1 2.1-1.6 3.2-1.5zM20.4 17.2c-.6 1.3-1 2-1.7 3.1-1 1.5-2.4 3.4-4.1 3.4-1.5 0-2-1-3.9-1-1.8 0-2.4 1-3.9 1-1.8 0-3.1-1.7-4.1-3.2C0.7 17.3 0 13.7 1.4 11c.8-1.5 2.2-2.5 3.7-2.5 1.5 0 2.4 1 3.6 1 1.2 0 1.9-1 3.6-1 1.3 0 2.7.7 3.7 1.9-3.2 1.8-2.7 6.3.4 7.8z"/></svg>
+          <div><small>Download on the</small><strong>App Store</strong></div>
+        </button>
+        <button class="store-btn">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M3 3l18 9-18 9V3z"/></svg>
+          <div><small>Get it on</small><strong>Google Play</strong></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== TESTIMONIALS ======================== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Real People, Real Food</span>
+        <h2 class="section-title">What Our Foodies Say</h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal" data-delay="0">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">FoodieGo completely changed how I eat. The food arrives hotter than I expected, and the app UI is just stunning. Can't imagine going back to cooking now!</p>
+          <div class="testimonial-footer">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80" alt="Priya Sharma"/>
+            <div class="testimonial-info">
+              <strong>Priya Sharma</strong>
+              <span>Marketing Lead, Bangalore</span>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal" data-delay="150">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Ordered sushi on a Saturday night, arrived in 28 minutes. Fresher than the restaurant itself! The live tracking is so satisfying to watch. Ten out of ten.</p>
+          <div class="testimonial-footer">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80" alt="Michael Chen"/>
+            <div class="testimonial-info">
+              <strong>Michael Chen</strong>
+              <span>Software Engineer, Mumbai</span>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal" data-delay="300">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">As someone who's tried every delivery app out there, FoodieGo genuinely stands out. The restaurant curation is brilliant and the checkout flow is seamless.</p>
+          <div class="testimonial-footer">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80" alt="Sarah Johnson"/>
+            <div class="testimonial-info">
+              <strong>Sarah Johnson</strong>
+              <span>UX Designer, Delhi</span>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== NEWSLETTER ======================== -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box reveal">
+        <div class="newsletter-icon">
+          <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"/><polyline points="22 6 12 13 2 6"/></svg>
+        </div>
+        <h2>Get Exclusive Deals First</h2>
+        <p>Join 50,000+ foodies and get weekly offers, new restaurant alerts, and 20% off your first order.</p>
+        <div class="newsletter-form" id="newsletterForm">
+          <input type="email" id="emailInput" placeholder="Enter your email address" class="newsletter-input"/>
+          <button class="btn-primary ripple" id="subscribeBtn">Subscribe</button>
+        </div>
+        <p class="newsletter-note" id="newsletterMsg"></p>
+        <div class="newsletter-trust">
+          <span>No spam, ever</span>
+          <span>•</span>
+          <span>Unsubscribe anytime</span>
+          <span>•</span>
+          <span>Weekly only</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">
+            <span class="logo-mark">F</span>
+            <span class="logo-text">FoodieGo</span>
+          </a>
+          <p class="footer-tagline">Bringing the city's best food to your door. Fast, fresh, and always delicious.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.1 1.5A4.5 4.5 0 0 0 12 8v1A11 11 0 0 1 3 5s-4 9 5 13a12 12 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.1-1A7.7 7.7 0 0 0 23 3z"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.5.3v2.7h-1.4c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="10 9 16 12 10 15"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>For Restaurants</h4>
+          <ul>
+            <li><a href="#">Partner With Us</a></li>
+            <li><a href="#">Restaurant Dashboard</a></li>
+            <li><a href="#">Promotions</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 FoodieGo Technologies Pvt. Ltd. All rights reserved.</p>
+        <p>Made in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
