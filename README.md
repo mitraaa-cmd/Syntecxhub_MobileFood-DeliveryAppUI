@@ -94,6 +94,8 @@ https://github.com/mitraaa-cmd/Syntecxhub_MobileFood-DeliveryAppUI
 ### Footer
 - Quick Links
 - Social Media Links
+  
+<img width="959" height="509" alt="Screenshot 2026-06-19 200030" src="https://github.com/user-attachments/assets/3ca0c71a-4f21-4421-ae2b-2e040d995d18" />
 
 ---
 
@@ -106,3 +108,4 @@ Syntecxhub_MobileFood-DeliveryAppUI
 ├── style.css
 ├── script.js
 └── README.md
+
